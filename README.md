@@ -1,1 +1,1 @@
-# Group6_Project3
+# Group Project 6: Survey Web application
