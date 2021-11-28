@@ -28,10 +28,8 @@ const Profile = () => {
 
   if (!user?.username) {
     return (
-      <h4>
-        You need to be logged in to see this. Use the navigation links above to
-        sign up or log in!
-      </h4>
+      <Redirect to="/login" />
+     
     );
   }
 
@@ -39,15 +37,17 @@ const Profile = () => {
     <div>
       <div className="flex-row justify-center mb-3">
         <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
-          Viewing {userParam ? `${user.username}'s` : 'your'} profile.
+          Viewing {userParam ? `${user.username}'s` : 'your'} Survey Postings.
         </h2>
 
         <div className="col-12 col-md-10 mb-5">
           <ThoughtList
             thoughts={user.thoughts}
-            title={`${user.username}'s thoughts...`}
+            title={`${user.username}'s surveys`}
             showTitle={false}
             showUsername={false}
+            profilePage={true}
+           
           />
         </div>
         {!userParam && (

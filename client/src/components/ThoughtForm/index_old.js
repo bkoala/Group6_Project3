@@ -8,13 +8,9 @@ import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
 import Auth from '../../utils/auth';
 
 const ThoughtForm = () => {
-  const [formState, setFormState] = useState({
-    thoughtText: '',
-    A1: '',
-    A2: '',
-    A3: '',
-    A4: '',
-  });
+  const [thoughtText, setThoughtText] = useState('');
+ const [A1, setA1test] = useState('');
+  const [characterCount, setCharacterCount] = useState(0);
 
   const [addThought, { error }] = useMutation(ADD_THOUGHT, {
     update(cache, { data: { addThought } }) {
@@ -44,67 +40,61 @@ const ThoughtForm = () => {
     try {
       const { data } = await addThought({
         variables: {
-     ...formState,
+          thoughtText,
           thoughtAuthor: Auth.getProfile().data.username,
         },
       });
 
-      setFormState('');
-     setTimeout(() => {
-        window.location.assign('/me');
-      }, 10);
+      setThoughtText('');
     } catch (err) {
-      console.error("Errors with your information.");
+      console.error(err);
     }
   };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-setFormState({
-      ...formState,
-      [name]: value,
-    });
+
+    if (name === 'thoughtText' && value.length <= 280) {
+      setThoughtText(value);
+      setCharacterCount(value.length);
+    }
+    
     
   };
 
   return (
     <div>
-      <h3>Add a Survey </h3>
+      <h3>What's on your techy mind?</h3>
 
       {Auth.loggedIn() ? (
         <>
-      
+          <p
+            className={`m-0 ${
+              characterCount === 280 || error ? 'text-danger' : ''
+            }`}
+          >
+            Character Count: {characterCount}/280
+          </p>
           <form
             className="flex-row justify-center justify-space-between-md align-center"
             onSubmit={handleFormSubmit}
           >
-            <div className="col-12 col-lg-9">              
-              <input
-                  className="form-inputsurvey"  placeholder="Survey Question" name="thoughtText" type="text"
-                  value={formState.name} onChange={handleChange}
-                />
-            <input
-                  className="form-input" placeholder="Survey choice" name="A1" type="text"
-                  value={formState.name} onChange={handleChange}
-                />
-             <input
-                  className="form-input" placeholder="Survey choice" name="A2" type="text"
-                  value={formState.name} onChange={handleChange}
-                />
-           
-               <input
-                  className="form-input" placeholder="Optional Third Survey choice" name="A3" type="text"
-                  value={formState.name} onChange={handleChange}
-                />
-
-               <input
-                  className="form-input" placeholder="Optional Fourth Survey choice" name="A4" type="text"
-                  value={formState.name} onChange={handleChange}
-                />
-            </div>
             <div className="col-12 col-lg-9">
+              <textarea
+                name="thoughtText"
+                placeholder="Here's a new thought..."
+                value={thoughtText}
+                className="form-input w-100"
+                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                onChange={handleChange}
+              ></textarea>
+            <input type="text" name="A1" value={formState.name}> </input>
+
+            </div>
+
+            <div className="col-12 col-lg-3">
               <button className="btn btn-primary btn-block py-3" type="submit">
-                Post Survey
+                Add Thought
               </button>
             </div>
             {error && (
@@ -116,7 +106,7 @@ setFormState({
         </>
       ) : (
         <p>
-          You need to be logged in to post a survey. Please{' '}
+          You need to be logged in to share your thoughts. Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
