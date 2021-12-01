@@ -13,7 +13,7 @@ The application was deployed to Heroku with a MongoDB database using MongoDB Atl
 ###
 A user needs to signup on the application in order to post or take a survey. After login the user could access all their surveys and delete them if needed, by using the delete button.
 The homepage shows a login/signup option for the user to login or signup after he clicks on the button or to donate to the effort. For the signup form the user needs a name, a valid email, and a password as inputs.
-After signup using the submit button, the user is logged in and presented with option to logout , post or take surveys.
+After signup using the submit button, the user is logged in and presented with option to logout , post or take surveys. A user can donate to site using donation button.
 The login form allows a user to login using his email and password.
 
 ### Various links showing various application pages
