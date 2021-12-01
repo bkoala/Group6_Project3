@@ -1,63 +1,82 @@
 [
   {
-    "thoughtText": "What is the survey?",
-    "thoughtAuthor": "Ben K",
-    "A1": "Answer one",
-      "A2": "Answer two",
-      "A3": "Answer three",
-      "A4": "Answer four",
+    "thoughtText": "Which of the following is the lesser of two evils?",
+    "thoughtAuthor": "Mail Chimp",
+    "A1": "A postmail box full of junk mail",
+      "A2": "An email inbox full of  junk mail",
+      "A3": "",
+      "A4": "",
     "comments": [{
-      "commentText":"Teste Active",
+      "commentText":"Junk Mail",
       "V1": 0,
       "V2": 0,
       "V3": 0,
       "V4": 0,
-      "commentAuthor":"Joh BnER1"}]
+      "commentAuthor":"None"}]
 },
   {
-    "thoughtText": "Some of the best programming is done on paper, really. Putting it into the computer is just a minor detail.",
-    "thoughtAuthor": "Max Kanat-Alexander",
-    "A1": "Answer d one",
-    "A2": "Answer dfaftwo",
-    "A3": "Answer  fdfathree",
-    "A4": "Answer  fadf four",
+    "thoughtText": "Which of the following do you hate the most?",
+    "thoughtAuthor": "Best Company",
+    "A1": "Telemarketing calls at home",
+    "A2": "Telemarketing voice mail messages at work",
+    "A3": "",
+    "A4": "",
   "comments": [{
-    "commentText":"Teste Active",
-    "commentAuthor":"Joh BnER1"}]
+    "commentText":"Telemarketing",
+    "commentAuthor":"None"}]
   },
   {
-    "thoughtText": "When you don't create things, you become defined by your tastes rather than ability. Your tastes only narrow & exclude people. So create.",
-    "thoughtAuthor": "Why The Lucky Stiff",
-    "A1": "Answer fdaf one",
-    "A2": "Answersdafa f two",
-    "A3": "Answerasdf  three",
-    "A4": "Answer  fdsffour",
+    "thoughtText": "What do you think will be the role of the Internet in our lives at the turn of the next century — the 22nd century?",
+    "thoughtAuthor": "Ben K",
+    "A1": "The Net will be our lifeline ",
+    "A2": "The Net will be just one of many technologies ",
+    "A3": "Something else will have taken the Net’s place ",
+    "A4": "",
 
   "comments": [{
-    "commentText":"Teste Active",
-    "V1": 0,
-    "V2": 0,
-    "V3": 0,
-    "V4": 0,
-    "commentAuthor":"Joh BnER1"}]
+    "commentText":"Internet",
+    "commentAuthor":"None"}]
     
   },
   {
-    "thoughtText": "What is the difference in the data files in the data.",
-    "thoughtAuthor": "Why The Lucky Stiff",
-    "A1": "Answer 1 data",
-    "A2": "Answer dafd two",
-    "A3": "Answer fa  three",
-    "A4": "Answer four",
+    "thoughtText":"Nowdays the movies we see, the music we hear, and the books we read have less to do with artistic creativity and talent than they do with commercial appeal. How much do you agree or disagree with this statement?",
+    "thoughtAuthor": "John Paul",
+    "A1": "Totally agree",
+    "A2": "Somewhat agree",
+    "A3": "Mostly disagree",
+    "A4": "Completely disagree",
 
   "comments": [{
-    "commentText":"Teste Active",
-    "V1": 0,
-    "V2": 0,
-    "V3": 0,
-    "V4": 0,
-    "commentAuthor":"Joh BnER1"}]
+    "commentText":"Entertainement",
+    "commentAuthor":"None"}]
+    
+  },
+  {
+    "thoughtText":"Do you more often use your phone, tablet/laptop, or desktop when online shopping",
+    "thoughtAuthor": "Ben K",
+    "A1": "Phone",
+    "A2": "Laptop/tablet",
+    "A3": "Desktop",
+    "A4": "",
+
+  "comments": [{
+    "commentText":"Web",
+    "commentAuthor":"None"}]
+    
+  },
+  {
+    "thoughtText":"What type of questions do you prefer in an exam?",
+    "thoughtAuthor": "Ben K",
+    "A1": "Answer questions",
+    "A2": "Multiple choices",
+    "A3": "",
+    "A4": "",
+
+  "comments": [{
+    "commentText":"Web",
+    "commentAuthor":"None"}]
     
   }
- 
+
 ]
+
