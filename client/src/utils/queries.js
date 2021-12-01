@@ -10,6 +10,7 @@ export const QUERY_USER = gql`
         _id
         thoughtText
         createdAt
+       
       }
     }
   }
@@ -26,6 +27,16 @@ export const QUERY_THOUGHTS = gql`
       A3
       A4
       createdAt
+      comments {
+        _id
+        commentText
+        V1
+        V2
+        V3
+        V4
+        commentAuthor
+        createdAt
+      }
     }
   }
 `;
@@ -66,6 +77,17 @@ export const QUERY_ME = gql`
         thoughtText
         thoughtAuthor
         createdAt
+        comments {
+          _id
+          commentText
+          V1
+          V2
+          V3
+          V4
+          commentAuthor
+          createdAt
+        }
+
       }
     }
   }
