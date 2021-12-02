@@ -33,16 +33,16 @@ const ThoughtList = ({
  let Tvn=new Array();
  let Tvnotes=[];
 for (let ii=0;ii<thoughts.length; ii++)  {
-
+     let Total = -1;
      for (let jj=0;jj< (thoughts[ii].comments.length) ; jj++){
       //console.log("sdfad" ,thoughts[ii].comments[jj].V1)
        TV1 += thoughts[ii].comments[jj].V1;
        TV2 +=thoughts[ii].comments[jj].V2;
        TV3 +=thoughts[ii].comments[jj].V3;
        TV4 +=thoughts[ii].comments[jj].V4;
-
+       Total +=1;
      }
-      Tvn=[TV1,TV2,TV3,TV4];
+      Tvn=[TV1,TV2,TV3,TV4,Total];
       TV1=0;TV2=0;TV3=0;TV4=0;  
     Tvnotes.push(Tvn);
     }
@@ -106,7 +106,7 @@ for (let ii=0;ii<thoughts.length; ii++)  {
              
             </div>
             <div className="card-footer">
-            <p> Total Votes</p>
+            <p> Total Votes: {Tvnotes[ii][4]}</p>
             <table><tr><td>{thought.A1} : </td> <td> {Tvnotes[ii][0]}</td> <td>{thought.A2} : </td> <td> {Tvnotes[ii][1]}</td> 
              {(thought.A3!=="") ?(
                <><td>{thought.A3}: </td><td> {Tvnotes[ii][2]}</td></> 

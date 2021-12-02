@@ -10,7 +10,16 @@ export const QUERY_USER = gql`
         _id
         thoughtText
         createdAt
-       
+        comments {
+          _id
+          commentText
+          V1
+          V2
+          V3
+          V4
+          commentAuthor
+          createdAt
+        }
       }
     }
   }

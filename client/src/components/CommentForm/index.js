@@ -67,11 +67,17 @@ const CommentForm = ({ thoughtId ,thought}) => {
               <label >{thought.A1}</label><br/>
               <input type="radio" id="A1" name="vote" value="2"  ></input>
               <label >{thought.A2}</label><br/>
-              <input type="radio" id="A1" name="vote" value="3"  ></input>
-              <label >{thought.A3}</label><br/>
-              <input type="radio" id="A1" name="vote" value="4" ></input>
-              <label >{thought.A4}</label><br/>
+              {(thought.A3!=="")?(
+             <> <input type="radio" id="A1" name="vote" value="3"  ></input>
+              <label >{thought.A3}</label><br/></>
+              ):(<br/>) } 
+              {(thought.A4!=="")?(
+             <> <input type="radio" id="A1" name="vote" value="4" ></input>
+              <label >{thought.A4}</label><br/></>
+              ):(<br/>) }
+             
               </div>
+             
               <div className="col-12 col-lg-9"> 
               <input type="hidden" id="commentText" name="commentText" value={commentText} ></input>
               </div>
