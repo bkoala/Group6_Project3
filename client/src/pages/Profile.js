@@ -40,13 +40,13 @@ const Profile = () => {
           Viewing {userParam ? `${user.username}'s` : 'your'} Survey Postings.
         </h2>
 
-        <div className="col-12 col-md-10 mb-5">
+        <div className="col-12 col-md-10 mb-5" >
           <ThoughtList
             thoughts={user.thoughts}
             title={`${user.username}'s surveys`}
             showTitle={false}
             showUsername={false}
-            profilePage={true}
+            
            
           />
         </div>

@@ -24,7 +24,7 @@ const CommentList = ({ comments = [] }) => {
                 <p className="card-body">
                 <input type="radio" id="html" name="fav_language" value={comment.commentText}/>
   <label for="html">{comment.commentText}</label><br/>
-<input type="radio" id="html" name="fav_language" value={comment.A1}/>
+<input  type="radio" id="html" name="fav_language" value={comment.A1}/>
   <label for="html">{comment.A1}</label><br/>
 <input type="radio" id="html" name="fav_language" value={comment.A2}/>
   <label for="html">{comment.A2}</label><br/>

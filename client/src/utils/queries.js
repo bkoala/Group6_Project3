@@ -85,6 +85,10 @@ export const QUERY_ME = gql`
         _id
         thoughtText
         thoughtAuthor
+        A1
+        A2
+        A3
+        A4
         createdAt
         comments {
           _id

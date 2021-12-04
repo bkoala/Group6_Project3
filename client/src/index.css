@@ -113,6 +113,15 @@ small {
   font-size: 80%;
 }
 
+.topPart{
+  height: 50%;
+}
+
+.roundElement	{
+	border-top-left-radius:  40px;
+  border-top-right-radius: 40px;
+}
+
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
  * all browsers.
@@ -330,6 +339,52 @@ template {
   display: none;
 }
 
+.title{
+  
+  font-size: 100px;
+  left: 100%;
+  right:40px;
+  height:60%;
+  
+}
+.tee{
+  left:170px;
+  position:relative
+}
+.titleIcon{
+ left: 20px;
+ top: 20px;
+
+ position: relative;
+ 
+}
+.but{
+  position:relative;
+  width:30%;
+  height: 180%;
+  left: 88%;
+  
+  top:0px;
+}
+.profile{
+ margin-left: 0px;
+ right: 43px;
+ top:-221px;
+
+}
+.logout{
+  margin-left: 300px;
+  top:-275px;
+}
+
+.bg{
+  
+  background-image:url("https://i.ibb.co/MnPkx1m/bg.jpg");
+
+  background-position: center;
+  background-size: cover;
+ 
+}
 /**
  * Add the correct display in IE 10.
  */
@@ -369,7 +424,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Times New Roman', monospace;
   margin: 0 0 0.5rem;
   line-height: 1.25;
 }
@@ -388,6 +443,7 @@ h3 {
 
 h4 {
   font-size: 1.5rem;
+  margin: 0 0 rem;
 }
 
 h5 {
@@ -425,6 +481,37 @@ button {
 a {
   color: #1b89bc;
   text-decoration: none;
+}
+.log{
+ z-index:9;
+ right: 100%;
+ padding: 0 35px;
+ margin-right: 5px;
+ margin-left: 5px;
+}
+.sign{
+  z-index:9;
+  right: 100%;
+}
+.banner{
+  margin:0%;
+  padding:0%;
+}
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1.5s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 a:hover {
@@ -1106,6 +1193,7 @@ a:hover {
 .card .card-footer {
   border-top: 1px solid #1a1a1a;
   padding: 0.375rem;
+
 }
 
 .card.card-rounded {
@@ -1161,7 +1249,7 @@ form .form-inputsurvey {
   width: 100%;
   padding: 0.75rem;
   color: #1a1a1a;
-  background-color: #FFFF00;
+  background-color: #e5ff00;
   margin: 0.625rem 0;
   font-size: 1.2rem;
   border: 1px solid #484848;
@@ -1175,11 +1263,20 @@ form .form-input.form-input-squared {
 form [type='checkbox'],
 form [type='radio'] {
   display: inline-block;
+  color: #31e1bd;
+
 }
 
 label form [type='checkbox'],
 label form [type='radio'] {
   display: inline-block;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 25%;
+
 }
 
 .container {
@@ -1204,6 +1301,7 @@ label form [type='radio'] {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+
 }
 
 .flex-wrap {

@@ -103,8 +103,9 @@ setFormState({
                 />
             </div>
             <div className="col-12 col-lg-9">
-              <button className="btn btn-primary btn-block py-3" type="submit">
-                Post Survey
+
+              <button className="btn btn-primary btn-block align-center" type="submit">
+               <p style ={{paddingBottom:'5px'}} > Post Survey </p>
               </button>
             </div>
             {error && (

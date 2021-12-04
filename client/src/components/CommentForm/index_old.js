@@ -52,78 +52,45 @@ const CommentForm = ({ thoughtId ,thought}) => {
   };
 
   return (
-    <div >
+    <div>
   
       {Auth.loggedIn() ? (
         <>
  
           <form
-            className="flex-row justify-center justify-space-between-md align-center" 
+            
             onSubmit={handleFormSubmit}
           >
-            <div className="col-12 col-lg-9" onChange={handleChange} >
-              
-            <p> {thought.thoughtText}</p>
-
-              <p>
-                <label>
-              <input  class="with-gap"   type="radio" id="A1" name="vote" value="1"  ></input>
-              <span >{thought.A1}</span>
-              </label>
-              <br/>
-              </p>
-              <p>
-              <label>
-              <input  class="with-gap"   type="radio" id="A1" name="vote" value="2"  ></input>
-              <span >{thought.A2}</span>
-              </label>
-              <br/>
-              </p>
-
+            <div className="col-12 col-lg-9" onChange={handleChange}>
+              <p> {thought.thoughtText}</p>
+              <input type="radio"   id="A1" name="vote" value="1"  ></input>
+              <label >{thought.A1}</label><br/>
+              <input type="radio"  id="A1" name="vote" value="2"  ></input>
+              <label >{thought.A2}</label><br/>
               {(thought.A3!=="")?(
-             <> 
-          <p>
-              <label>
-              <input  class="with-gap"   type="radio" id="A1" name="vote" value="3"  ></input>
-              <span >{thought.A3}</span>
-              </label>
-              <br/>
-              </p>
+             <> <input type="radio"  id="A1" name="vote" value="3"  ></input>
+              <label >{thought.A3}</label><br/></>
+              ):(<br/>) } 
               {(thought.A4!=="")?(
-             <> 
-               <p>
-              <label>
-              <input  class="with-gap"   type="radio" id="A1" name="vote" value="4"  ></input>
-              <span >{thought.A4}</span>
-              </label>
-              <br/>
-              </p>
-              
-              </>
+             <> <input type="radio"  id="A1" name="vote" value="4" ></input>
+              <label >{thought.A4}</label><br/></>
               ):(<br/>) }
-              
-
-
-              </>
-              ):(
-              <br/>
-              ) } 
              
               </div>
              
               <div className="col-12 col-lg-9"> 
               <input type="hidden" id="commentText" name="commentText" value={commentText} ></input>
               </div>
-            <div className="col-12 col-lg-9 ">
-              <button className="btn btn-primary  btn-block align-center" type="submit">
-              <p style ={{paddingBottom:'5px'}} > Submit </p>
+            <div className="col-12 col-lg-9">
+              <button className="btn btn-primary btn-block py-3" type="submit">
+                Submit
               </button>
             </div>
           </form>
         </>
       ) : (
         <p>
-          You need to be logged in to post a survey. Please{' '}
+          Please log in or signup to take or post a survey. Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
