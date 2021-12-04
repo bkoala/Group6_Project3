@@ -18,8 +18,8 @@ The login form allows a user to login using his email and password.
 
 ### Various links showing various application pages
 
-Heroku deployed URL: 
-Application GitHub URL : 
+Heroku deployed URL: https://group6-easysurvey.herokuapp.com/
+Application GitHub URL : https://github.com/bkoala/Group6_Project3.git
 
 Home Page Screen Shot : ![Screenshot](./images/homeP.png)
 User Page Screen Shot : ![Screenshot](./images/userP.png)
